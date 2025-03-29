@@ -39,8 +39,8 @@ p {
     height: 128px;
     border-radius: 128px;
     overflow: hidden;
-    border: 1px solid var(--colors-slate-50, #F8FAFC);
-    box-shadow: 0px 0px 4px 1px var(--colors-purple-300, #D8B4FE), 0px 1px 14.5px 5px var(--colors-purple-800, #6B21A8);
+    border: 1px solid #F8FAFC;
+    box-shadow: 0px 0px 4px 1px#D8B4FE, 0px 1px 14.5px 5px #6B21A8;
     ;
 }
 
@@ -61,7 +61,7 @@ p {
 
 .nome__usuario {
     color: #FFF;
-    text-shadow: 0px -2px 4px var(--colors-purple-600, #9333EA), 0px 3px 8px var(--colors-blue-400, #60A5FA);
+    text-shadow: 0px -2px 4px #9333EA, 0px 3px 8px #60A5FA;
     font-size: 24px;
     font-weight: 600;
 
@@ -80,6 +80,8 @@ p {
     flex-direction: column;
     gap: 24px;
     width: 100%;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .main__link {
@@ -108,10 +110,10 @@ a {
 a.main__link:hover {
     transform: scale(1.05);
     background: rgba(0, 0, 0, 0.575);
-    text-shadow: 0px -2px 4px var(--colors-purple-600, #9333EA), 0px 3px 8px var(--colors-blue-400, #60A5FA);
+    text-shadow: 0px -2px 4px #9333EA, 0px 3px 8px #60A5FA;
 }
 
 a.icon__link:hover {
     transform: scale(1.2);
-    text-shadow: 0px -2px 4px var(--colors-purple-600, #9333EA), 0px 3px 8px var(--colors-blue-400, #60A5FA);
+    text-shadow: 0px -2px 4px #9333EA, 0px 3px 8px #60A5FA;
 }
