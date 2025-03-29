@@ -1,0 +1,107 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 412px;
+    border-radius: 14px;
+    background: url("background.webp") lightgray 50% / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+    padding: 40px;
+    font-family: "Orbitron";
+    font-size: 18px;
+    color: white;
+    overflow: hidden;
+}
+
+p {
+    font-family: "Open Sans";
+    font-size: 14px;
+}
+
+.frame__pic {
+    width: 128px;
+    height: 128px;
+    border-radius: 128px;
+    overflow: hidden;
+    border: 1px solid var(--colors-slate-50, #F8FAFC);
+    box-shadow: 0px 0px 4px 1px var(--colors-purple-300, #D8B4FE), 0px 1px 14.5px 5px var(--colors-purple-800, #6B21A8);
+    ;
+}
+
+.profile__pic {
+    object-fit: cover;
+    object-position: 0px 8px;
+    width: 118.27%;
+    height: 153.385%;
+    transform: translate(-14px, -11.333px);
+}
+
+.container__titulos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.nome__usuario {
+    color: #FFF;
+    text-shadow: 0px -2px 4px var(--colors-purple-600, #9333EA), 0px 3px 8px var(--colors-blue-400, #60A5FA);
+    font-size: 24px;
+    font-weight: 600;
+
+}
+
+.job__usuario {
+    color: #FFF;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.50);
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.main__links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.main__link {
+    border-radius: 25px;
+    border: 1px solid #FFF;
+    background: rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(3px);
+    font-size: 16px;
+    padding: 8px;
+}
+
+.socials {
+    height: fit-content;
+    display: flex;
+    gap: 16px;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+a.main__link:hover {
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.575);
+    text-shadow: 0px -2px 4px var(--colors-purple-600, #9333EA), 0px 3px 8px var(--colors-blue-400, #60A5FA);
+}
+
+a.icon__link:hover {
+    transform: scale(1.2);
+    text-shadow: 0px -2px 4px var(--colors-purple-600, #9333EA), 0px 3px 8px var(--colors-blue-400, #60A5FA);
+}
