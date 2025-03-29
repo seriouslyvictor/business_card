@@ -1,0 +1,8 @@
+@media (min-width: 700px) {
+    body {
+        background-color: #12011a;
+    }
+    .card {
+        width: 712px;
+    }
+}
