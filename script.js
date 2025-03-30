@@ -6,7 +6,7 @@ const randomBg = function (array) {
 
     if (cardEl && array.length > 0) { // Check if element exists and array is not empty
         let rng = Math.floor(Math.random() * array.length); // Use dynamic length
-        cardEl.style.setProperty("background-image", `url("/backgrounds/${array[rng]}")`); // Fix CSS format
+        cardEl.style.setProperty("background-image", `url("backgrounds/${array[rng]}")`); // Fix CSS format
     }
 };
 allLinks.forEach((link, idx) => {
