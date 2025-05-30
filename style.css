@@ -1,3 +1,14 @@
+:root {
+    --primary-purple: #9333EA;
+    --primary-blue: #60A5FA;
+    --border-color: #F8FAFC;
+    --text-shadow-purple: 0px -2px 4px var(--primary-purple);
+    --text-shadow-blue: 0px 3px 8px var(--primary-blue);
+    --glass-bg: rgba(0, 0, 0, 0.18);
+    --glass-bg-hover: rgba(0, 0, 0, 0.575);
+    --input-width: calc(100% - 24px);
+}
+
 body {
     display: grid;
     place-items: center;
@@ -59,10 +70,9 @@ p {
 
 .nome__usuario {
     color: #FFF;
-    text-shadow: 0px -2px 4px #9333EA, 0px 3px 8px #60A5FA;
+    text-shadow: var(--text-shadow-purple), var(--text-shadow-blue);
     font-size: 24px;
     font-weight: 600;
-
 }
 
 .job__usuario {
@@ -70,7 +80,6 @@ p {
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.50);
     font-size: 20px;
     font-weight: 600;
-
 }
 
 .main__links {
@@ -83,11 +92,12 @@ p {
 }
 
 .main__link {
+    height: 48px;
     border-radius: 25px;
     border: 1px solid #FFF;
     background: rgba(0, 0, 0, 0.18);
     backdrop-filter: blur(3px);
-    font-size: 16px;
+    font-size: 20px;
     padding: 8px;
 }
 
@@ -105,13 +115,118 @@ a {
     transition: 0.3s ease-in-out;
 }
 
-a.main__link:hover {
+a.main__link:hover,
+.contact__btn:hover,
+.active .contact__btn {
     transform: scale(1.05);
-    background: rgba(0, 0, 0, 0.575);
-    text-shadow: 0px -2px 4px #9333EA, 0px 3px 8px #60A5FA;
+    background: var(--glass-bg-hover);
+    text-shadow: var(--text-shadow-purple), var(--text-shadow-blue);
 }
 
 a.icon__link:hover {
     transform: scale(1.2);
     text-shadow: 0px -2px 4px #9333EA, 0px 3px 8px #60A5FA;
+}
+
+.contact__container {
+    width: 100%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(3px);
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+    max-height: 48px;
+    box-shadow: 0 2px 16px 0 rgba(147, 51, 234, 0.15);
+    position: relative;
+}
+
+.contact__container.active {
+    max-height: 500px;
+    box-shadow: 0 4px 32px 0 rgba(147, 51, 234, 0.25);
+}
+
+.contact__btn {
+    height: 48px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 8px;
+    border-radius: 0;
+    transition: background 0.3s, color 0.3s;
+    z-index: 2;
+    position: relative;
+    box-shadow: none;
+}
+
+.contact__form {
+    width: 100%;
+    padding: 20px 0 0 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+    position: static;
+    box-shadow: none;
+}
+
+.contact__container.active .contact__form {
+    max-height: 400px;
+    opacity: 1;
+    padding: 20px 0 20px 0;
+}
+
+.contact__form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact__form input,
+.submit__btn {
+    margin: 0 auto;
+    width: var(--input-width);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    font-family: "Open Sans";
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact__form input {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.contact__form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact__form input:focus {
+    outline: none;
+    border-color: var(--primary-purple);
+}
+
+.submit__btn {
+    background: rgba(147, 51, 234, 0.3);
+    color: white;
+    font-family: "Orbitron";
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit__btn:hover {
+    background: rgba(147, 51, 234, 0.5);
 }
