@@ -31,30 +31,29 @@ contactBtn.addEventListener('click', (e) => {
 // });
 
 const contactFormElement = document.getElementById('contactForm');
-contactFormElement.addEventListener('submit', (e) => {
-    e.preventDefault();
-    contactContainer.classList.remove('active');
-    contactFormElement.reset();
+// contactFormElement.addEventListener('submit', (e) => {
+//     contactContainer.classList.remove('active');
+//     contactFormElement.reset();
 
-    // Fade out current text
-    contactBtn.classList.add('fade');
+//     // Fade out current text
+//     contactBtn.classList.add('fade');
 
-    // Wait for fade out, then change text and fade in
-    setTimeout(() => {
-        contactBtn.textContent = "Tudo certo! 🎉";
-        contactBtn.classList.remove('fade');
+//     // Wait for fade out, then change text and fade in
+//     setTimeout(() => {
+//         contactBtn.textContent = "Tudo certo! 🎉";
+//         contactBtn.classList.remove('fade');
 
-        // After 3 seconds, fade out success message
-        setTimeout(() => {
-            contactBtn.classList.add('fade');
+//         // After 3 seconds, fade out success message
+//         setTimeout(() => {
+//             contactBtn.classList.add('fade');
 
-            // Wait for fade out, then change back to original text and fade in
-            setTimeout(() => {
-                contactBtn.textContent = "Vamos Conversar?";
-                contactBtn.classList.remove('fade');
-            }, 300);
-        }, 3000);
-    }, 300);
-});
+//             // Wait for fade out, then change back to original text and fade in
+//             setTimeout(() => {
+//                 contactBtn.textContent = "Vamos Conversar?";
+//                 contactBtn.classList.remove('fade');
+//             }, 300);
+//         }, 3000);
+//     }, 300);
+// });
 
 randomBg(allBgs)

@@ -36,19 +36,19 @@
         content="Victor Schiavo - Instrutor e Desenvolvedor Front-end. Aprenda desenvolvimento web com projetos práticos e tutoriais.">
     <meta property="twitter:image" content="./profile_pic.png">
 
-    <link rel="shortcut icon" href="business-cards.png" type="image/x-icon">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animista.css">
-    <link rel="stylesheet" href="responsive.css">
-    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="{{url_for('static', filename='business-cards.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='reset.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='animista.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='responsive.css')}}">
+    <script src="{{url_for('static', filename='script.js')}}" defer></script>
 </head>
 
 <body>
     <div class="card">
         <div class="card__content">
             <div class="frame__pic puff-in-center">
-                <img src="profile_pic.png" alt="Foto de Perfil do usuário" class="profile__pic">
+                <img src="{{url_for('static', filename='profile_pic.png')}} " alt="Foto de Perfil do usuário" class="profile__pic">
             </div>
             <div class="container__titulos">
                 <h1 class="nome__usuario focus-in-expand">Victor Schiavo</h1>
@@ -65,7 +65,7 @@
                     <div class="contact__container">
                         <button class="contact__btn">Vamos Conversar?</button>
                         <div class="contact__form">
-                            <form id="contactForm" method="POST">
+                            <form id="contactForm" method="POST" action="/contato">
                                 <input type="text" name="nome" placeholder="Seu nome" required>
                                 <input type="email" name="email" placeholder="Seu email" required>
                                 <input type="tel" name="whatsapp" placeholder="Seu WhatsApp" required>

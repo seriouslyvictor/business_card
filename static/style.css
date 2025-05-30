@@ -18,7 +18,7 @@ body {
     min-width: 380px;
     width: 100%;
     height: 100dvh;
-    background: url("/backgrounds/background.webp") lightgray 50% / cover no-repeat;
+    background: url("backgrounds/Planet.jpg") lightgray 50% / cover no-repeat;
     display: flex;
     flex-direction: column;
     gap: 28px;
