@@ -20,7 +20,7 @@ def salvar_dados():
     with open(file="data/leads.json", mode="w", encoding="utf-8") as file:
         json.dump(dados_leads, file)
             
-    return "Leads salvos!"
+    return render_template("confirmation.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bcf72d1d5f.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-color: #12011a;
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+        }
+
+        .confirmation-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--glass-bg);
+            backdrop-filter: blur(3px);
+            border: 1px solid var(--border-color);
+            border-radius: 25px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 32px 0 rgba(147, 51, 234, 0.25);
+            animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+        }
+
+        .check-icon {
+            font-size: 3rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+            animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation-delay: 0.3s;
+        }
+
+        .confirmation-message {
+            font-family: "Orbitron";
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-shadow: var(--text-shadow-purple), var(--text-shadow-blue);
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: rgba(147, 51, 234, 0.3);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: white;
+            font-family: "Orbitron";
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .back-button:hover {
+            background: rgba(147, 51, 234, 0.5);
+            transform: scale(1.05);
+        }
+
+        @keyframes scale-in-center {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="confirmation-container">
+        <i class="fas fa-check-circle check-icon"></i>
+        <h2 class="confirmation-message">Mensagem Enviada!</h2>
+        <p style="color: white; margin-bottom: 1.5rem;">Obrigado por entrar em contato. Retornarei em breve!</p>
+        <a href="/" class="back-button">Voltar ao Início</a>
+    </div>
+</body>
+
+</html>
