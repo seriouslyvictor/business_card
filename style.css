@@ -160,10 +160,14 @@ a.icon__link:hover {
     letter-spacing: 1px;
     padding: 8px;
     border-radius: 0;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s, color 0.3s, opacity 0.3s;
     z-index: 2;
     position: relative;
     box-shadow: none;
+}
+
+.contact__btn.fade {
+    opacity: 0;
 }
 
 .contact__form {

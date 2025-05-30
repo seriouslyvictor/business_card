@@ -35,10 +35,26 @@ contactFormElement.addEventListener('submit', (e) => {
     e.preventDefault();
     contactContainer.classList.remove('active');
     contactFormElement.reset();
-    contactBtn.textContent = "Tudo certo! 🎉";
+
+    // Fade out current text
+    contactBtn.classList.add('fade');
+
+    // Wait for fade out, then change text and fade in
     setTimeout(() => {
-        contactBtn.textContent = "Vamos Conversar?";
-    }, 3000);
+        contactBtn.textContent = "Tudo certo! 🎉";
+        contactBtn.classList.remove('fade');
+
+        // After 3 seconds, fade out success message
+        setTimeout(() => {
+            contactBtn.classList.add('fade');
+
+            // Wait for fade out, then change back to original text and fade in
+            setTimeout(() => {
+                contactBtn.textContent = "Vamos Conversar?";
+                contactBtn.classList.remove('fade');
+            }, 300);
+        }, 3000);
+    }, 300);
 });
 
 randomBg(allBgs)
